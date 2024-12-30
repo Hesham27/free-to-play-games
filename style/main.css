@@ -1,0 +1,139 @@
+body{
+    box-sizing: border-box;
+    overflow: auto;
+    font-family: cursive;
+    background-color: #272b30;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar{
+        width: 100% !important;
+
+       background-color: red;
+  
+    }
+}
+
+
+#home{
+    background-color:#272b30 ;
+   
+}
+
+#header{
+
+   height: 20vh;
+    background-image: url(../img/wraper.png);
+    background-position: center center;
+    background-size: cover;
+
+}
+.logoImg{
+    width: 50px;
+}
+.navbar{
+    background-color: rgb(58, 73, 123) !important;
+}
+ .navbar-brand {
+    color: aliceblue;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: #09c !important;
+}
+.nav-link:active{
+    color: #09c !important;
+}
+#nav{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 12121 !important;
+}
+.gameCard{
+    background-color: #272b30;
+    transform: scale(.95);
+    transition: all .5s;
+   opacity: .8;
+}
+
+.gameCard:hover {
+transform: scale(1);
+opacity: 1;
+}
+
+.gameCard a{
+    color: white;
+}
+.gameCard a:hover{
+    color: white;
+}
+.card-text{
+    color: #fff !important;
+    font-size: 15px;
+}
+.cardFotter {
+    font-size: 12px;
+}
+.cardFotter span{
+    background-color:#32383e;
+    padding: 3px;
+}
+.btnc{
+    background-color: #0d6efd;
+    padding: 5px;
+    border: 0 ;
+    border-radius: 5px;
+}
+.pageSpan{
+    color: #fff;
+}
+.pageSpan span{
+    background-color: #09c;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 5px;
+}
+.header{
+    color: white;
+}
+
+
+  .loader {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    border-color: #FF3D00;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
